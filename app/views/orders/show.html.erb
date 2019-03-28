@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @order.client_id %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @order.task_id %>
+</p>
+
+<p>
+  <strong>Date of order:</strong>
+  <%= @order.date_of_order %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @order.due_date %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%= @order.total_price %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
