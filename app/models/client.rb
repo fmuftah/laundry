@@ -5,7 +5,7 @@ class Client < ApplicationRecord
     
     
     validates_presence_of :first_name, :last_name, :phone, :address
-    validates_format_of :phone, with: /\A\(?\d{4}\)?[-. ]?\d{4}/, message: "should be 8 digits (area code needed) and delimited with dashes only"
+    validates_format_of :phone, with: /\d{8}/, message: "should be 8 digits"
     
     scope :alphabetical, -> { order('name') }
     
