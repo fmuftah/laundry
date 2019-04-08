@@ -1,8 +1,8 @@
 # require needed files
 
-require './test/sets/client_contexts'
-require './test/sets/order_contexts'
-require './test/sets/task_contexts'
+require './test/sets/clients_contexts'
+require './test/sets/orders_contexts'
+require './test/sets/tasks_contexts'
 
 module Contexts
   # explicitly include all sets of contexts used for testing 

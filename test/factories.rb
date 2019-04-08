@@ -11,10 +11,13 @@ FactoryBot.define do
     association :client
     association :task
     date_of_order { Date.current }
-    due_on {1.day.from_now.to_date}
+    due_on {3.day.from_now.to_date}
   end
   
-  factory :assignment do
+  factory :task do
+    name { "Dry Clean"}
+    type { "Dry Clean" }
+    cost { 35 }
 
   end
 

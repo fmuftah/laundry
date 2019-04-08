@@ -2,8 +2,10 @@
 
 one:
   name: MyString
+  cleaning_type: MyString
   cost: 1
 
 two:
   name: MyString
+  cleaning_type: MyString
   cost: 1

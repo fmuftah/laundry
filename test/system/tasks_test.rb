@@ -14,6 +14,7 @@ class TasksTest < ApplicationSystemTestCase
     visit tasks_url
     click_on "New Task"
 
+    fill_in "Cleaning type", with: @task.cleaning_type
     fill_in "Cost", with: @task.cost
     fill_in "Name", with: @task.name
     click_on "Create Task"
@@ -26,6 +27,7 @@ class TasksTest < ApplicationSystemTestCase
     visit tasks_url
     click_on "Edit", match: :first
 
+    fill_in "Cleaning type", with: @task.cleaning_type
     fill_in "Cost", with: @task.cost
     fill_in "Name", with: @task.name
     click_on "Update Task"

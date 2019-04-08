@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ClientTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  should have_many(:orders)
+  should have_many(:tasks).through(:orders)
 end
