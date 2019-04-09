@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :client_id %>
     <%= form.number_field :client_id %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :task_id %>
     <%= form.number_field :task_id %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :date_of_order %>
     <%= form.date_select :date_of_order %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :due_date %>
     <%= form.date_select :due_date %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :total_price %>
     <%= form.number_field :total_price %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+ <div class="actions">
+    <%= form.submit :class=>"btn waves-effect waves-light" %>
+    <%= link_to 'Cancel', orders_path, :class => 'waves-effect waves-light btn red' %>
   </div>
 <% end %>
