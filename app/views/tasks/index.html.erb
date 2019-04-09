@@ -1,8 +1,13 @@
+  <style>
+    body { background-color: #FFCFCA; }
+  </style>
+<div class="container">
 <p id="notice"><%= notice %></p>
-
+  <div class="small-1 columns">&nbsp;</div>
+	<div class="small-5 columns">&nbsp;</div>
 <h1>Tasks</h1>
-
-<table>
+<%= link_to 'New Task', new_task_path, :class=> "right"%>
+<table class="striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -26,6 +31,11 @@
   </tbody>
 </table>
 
+
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+  <div class="small-1 columns">&nbsp;</div>
+	<div class="small-5 columns">&nbsp;</div>
+</div>
+
+

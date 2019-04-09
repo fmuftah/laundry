@@ -10,24 +10,25 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="input-field">
+<div class="container">
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :cleaning_type %>
-    <%= form.select :cleaning_type, options_for_select([['Dry Clean', 'Dry Clean'], ['Wash & Press', 'Wash & Press'], ['Pressing', 'Pressing']])%>
+    <%= form.text_field :cleaning_type %>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :cost %>
     <%= form.number_field :cost %>
   </div>
 
  <div class="actions">
-    <%= form.submit :class=>"btn waves-effect waves-light" %>
-    <%= link_to 'Cancel', tasks_path, :class => 'waves-effect waves-light btn red' %>
+    <%= form.submit :class => "btn btn-outline-secondary" %>
+    <%= link_to 'Cancel', orders_path, :class => "btn btn-outline-secondary" %>
   </div>
+</div>
 <% end %>

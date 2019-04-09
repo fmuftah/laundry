@@ -10,34 +10,37 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="input-field">
+<div class="container">
+  <div class="field">
     <%= form.label :client_id %>
     <%= form.number_field :client_id %>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :task_id %>
     <%= form.number_field :task_id %>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :date_of_order %>
-    <%= form.date_select :date_of_order %>
+    <%= form.text_field :date_of_order, prompt: "Date of Order", class: "datepicker", :value =>
+					(form.object.date_of_order.strftime('%B %d, %Y') if form.object.date_of_order != nil)%>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :due_date %>
-    <%= form.date_select :due_date %>
+    <%= form.text_field :due_date, prompt: "Due Date", class: "datepicker", :value =>
+					(form.object.due_date.strftime('%B %d, %Y') if form.object.due_date != nil)%>
   </div>
 
-  <div class="input-field">
+  <div class="field">
     <%= form.label :total_price %>
     <%= form.number_field :total_price %>
   </div>
 
  <div class="actions">
-    <%= form.submit :class=>"btn waves-effect waves-light" %>
-    <%= link_to 'Cancel', orders_path, :class => 'waves-effect waves-light btn red' %>
+    <%= form.submit :class => "btn btn-outline-secondary" %>
+    <%= link_to 'Cancel', orders_path, :class => "btn btn-outline-secondary" %>
   </div>
+</div>
 <% end %>

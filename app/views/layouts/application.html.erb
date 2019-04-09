@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Creamery :: <%= controller.controller_name.capitalize %> - <%= controller.action_name.capitalize %></title>
+  <title>Laundry</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <%= csrf_meta_tags %>
@@ -10,46 +10,37 @@
 <!-- Dropdown Structure -->
 <nav class="navbar-inner">  
     
-    <a href="/" id="brand-logo">The A&M Creamery</a>
-    <img src="/assets/icon.png" id = "icon" width= 50px height= 50px >
+    <a href="/" id="brand-logo">The Laundry Service</a>
+    <img src="/assets/laundry_icon.jpg" id = "icon" width= 50px height= 70px >
     <ul class="right">
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/stores" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Stores
+          Orders
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href= "/stores"> Store List</a>
-          <a class="dropdown-item" href="/stores/new">Add Store</a>
+          <a class="dropdown-item" href= "/orders"> Order List</a>
+          <a class="dropdown-item" href="/orders/new">New Order</a>
           <a class="dropdown-item" href= "/active"> Active Store List</a>
           <a class="dropdown-item" href="/inactive">Inactive Store List</a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/employees" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Employee
+          Tasks
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href= "/employees"> Employees List</a>
-          <a class="dropdown-item" href="/employees/new">Add Employees</a>
-          <a class="dropdown-item" href= "/active_employees"> Active Employees List</a>
-          <a class="dropdown-item" href= "/inactive_employees"> Inactive Employees List</a>
-          <a class="dropdown-item" href= "/younger"> 18 or younger</a>
-          <a class="dropdown-item" href= "/older"> 18 or older</a>
-          <a class="dropdown-item" href= "/regulars"> Employees</a>
-          <a class="dropdown-item" href= "/managers"> Managers</a>
-          <a class="dropdown-item" href= "/admins"> Admins</a>
+          <a class="dropdown-item" href= "/tasks"> Tasks List</a>
+          <a class="dropdown-item" href="/tasks/new">New Task</a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/employees" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Assignments
+          Clients
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href= "/assignments"> Assignments List</a>
-          <a class="dropdown-item" href="/assignments/new">Add Assignments</a>
-          <a class="dropdown-item" href= "/current"> Current Assignments</a>
-          <a class="dropdown-item" href= "/past"> Past Assignments</a>
+          <a class="dropdown-item" href= "/clients"> Clients List</a>
+          <a class="dropdown-item" href="/clients/new">Add New Client</a>
         </div>
       </li>
     </ul>
